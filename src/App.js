@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-const AxonCodeWebsite = () => {
+const App = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -562,4 +562,4 @@ const AxonCodeWebsite = () => {
   );
 };
 
-export default AxonCodeWebsite;
+export default App;
