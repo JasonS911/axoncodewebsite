@@ -1,7 +1,7 @@
 {
   "name": "axoncode-website",
   "version": "0.1.0",
-  "homepage": "https://jasons911.github.io/axoncodewebsite/",
+  "homepage": "https://axoncode.dev",
   "private": false,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
