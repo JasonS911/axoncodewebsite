@@ -46,6 +46,7 @@ const App = () => {
       name: "FlashHanzi",
       status: "Live",
       statusClass: "status-live",
+      link: "https://apps.apple.com/us/app/flashhanzi/id6747597400",
       description: "A comprehensive tool for learning Chinese.",
       features: [
         "Daily words and passages",
@@ -56,66 +57,31 @@ const App = () => {
 
       ]
     },
-    // {
-    //   name: "MindMapper",
-    //   status: "In Development",
-    //   statusClass: "status-development",
-    //   description: "An innovative mobile app that helps users organize thoughts, create visual mind maps, and enhance creative thinking through intuitive design.",
-    //   features: [
-    //     "Drag-and-drop interface",
-    //     "Cloud synchronization",
-    //     "Collaborative editing",
-    //     "Export to multiple formats"
-    //   ]
-    // },
-    // {
-    //   name: "EcoTracker",
-    //   status: "In Development",
-    //   statusClass: "status-development",
-    //   description: "A sustainability-focused application that helps individuals and businesses track their environmental impact and discover eco-friendly alternatives.",
-    //   features: [
-    //     "Carbon footprint calculation",
-    //     "Sustainable product recommendations",
-    //     "Community challenges",
-    //     "Impact visualization"
-    //   ]
-    // },
-    // {
-    //   name: "CodeMentor AI",
-    //   status: "Planning",
-    //   statusClass: "status-planning",
-    //   description: "An intelligent coding assistant that provides personalized learning experiences, code reviews, and mentorship for developers at all levels.",
-    //   features: [
-    //     "AI-powered code analysis",
-    //     "Personalized learning paths",
-    //     "Real-time debugging assistance",
-    //     "Multi-language support"
-    //   ]
-    // },
-    // {
-    //   name: "ConnectHub",
-    //   status: "Planning",
-    //   statusClass: "status-planning",
-    //   description: "A next-generation networking platform that uses smart matching algorithms to connect professionals and foster meaningful business relationships.",
-    //   features: [
-    //     "AI-driven matching",
-    //     "Virtual networking events",
-    //     "Skill-based connections",
-    //     "Integrated messaging system"
-    //   ]
-    // },
-    // {
-    //   name: "HealthVault",
-    //   status: "Planning",
-    //   statusClass: "status-planning",
-    //   description: "A secure personal health management system that empowers users to take control of their health data and connect with healthcare providers seamlessly.",
-    //   features: [
-    //     "Encrypted health records",
-    //     "Appointment scheduling",
-    //     "Medication tracking",
-    //     "Provider integration"
-    //   ]
-    // }
+    {
+      name: "MakeGuitarTabs",
+      status: "Live",
+      statusClass: "status-live",
+      link: "https://makeguitartabs.onrender.com",
+      description: "Build your own guitar tabs with ease.",
+      features: [
+        "Create and save tabs to personal account",
+        "Interactive fretboard for various instruments",
+        "Show notes feature",
+        "Export and print tabs",
+      ]
+    },
+    {
+      name: "MetaChess",
+      status: "In Progress",
+      statusClass: "status-development",
+      link: "",
+      description: "A twist to the classic chess game.",
+      features: [
+        "Chess with personalized boards and pieces",
+        "Online Multiplayer and local play",
+        "AI bots of varying difficulties"
+      ]
+    },
   ];
 
   return (
@@ -519,6 +485,8 @@ const App = () => {
                       {product.status}
                     </span>
                   </div>
+                  <a href={product.link}>{product.link}</a>
+
                   <p>{product.description}</p>
                   <ul className="product-features">
                     {product.features.map((feature, featureIndex) => (
