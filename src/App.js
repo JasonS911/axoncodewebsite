@@ -58,6 +58,22 @@ const App = () => {
       ]
     },
     {
+      name: "JuicySwipe",
+      status: "In Progress",
+      statusClass: "status-development",
+      link: "",
+      description: "Fast-paced, finger-swiping fruit frenzy",
+      features: [
+        "Color-matching fruit-catching fun",
+        "Explosive bomb mechanics",
+        "Online leaderboards to compete with friends",
+        "Vibrant, juicy graphics and animations",
+        "Catchy, upbeat soundtrack"
+      ],
+      privacy: "/juicyswipe"
+
+    },
+    {
       name: "MakeGuitarTabs",
       status: "Live",
       statusClass: "status-live",
@@ -493,7 +509,9 @@ const App = () => {
                       <li key={featureIndex}>{feature}</li>
                     ))}
                   </ul>
-                </div>
+                  {product.privacy && (
+                    <a href={product.privacy}>Privacy Policy</a>
+                  )}                </div>
               ))}
             </div>
           </div>
