@@ -46,7 +46,8 @@ const App = () => {
       name: "FlashHanzi",
       status: "Live",
       statusClass: "status-live",
-      link: "https://apps.apple.com/us/app/flashhanzi/id6747597400",
+      linkOne: "https://apps.apple.com/us/app/flashhanzi/id6747597400",
+      linkTwo: "https://play.google.com/store/apps/details?id=com.axoncode.flashhanzi",
       description: "A comprehensive tool for learning Chinese.",
       features: [
         "Daily words and passages",
@@ -54,14 +55,15 @@ const App = () => {
         "Spaced Repetition based review system",
         "Dictionary with over 100000 entries with example sentences and stroke order animations",
         "Ability to create personal notes and personal review cards"
-
-      ]
+      ],
+      privacy: "/flashhanzi"
     },
     {
       name: "JuicySwipe",
-      status: "In Progress",
-      statusClass: "status-development",
-      link: "",
+      status: "Live",
+      statusClass: "status-live",
+      linkOne: "https://apps.apple.com/us/app/juicyswipe/id6749508111",
+      linkTwo: "",
       description: "Fast-paced, finger-swiping fruit frenzy",
       features: [
         "Color-matching fruit-catching fun",
@@ -77,7 +79,8 @@ const App = () => {
       name: "MakeGuitarTabs",
       status: "Live",
       statusClass: "status-live",
-      link: "https://makeguitartabs.onrender.com",
+      linkOne: "https://makeguitartabs.onrender.com",
+      linkTwo: "",
       description: "Build your own guitar tabs with ease.",
       features: [
         "Create and save tabs to personal account",
@@ -90,7 +93,8 @@ const App = () => {
       name: "MetaChess",
       status: "In Progress",
       statusClass: "status-development",
-      link: "",
+      linkOne: "",
+      linkTwo: "",
       description: "A twist to the classic chess game.",
       features: [
         "Chess with personalized boards and pieces",
@@ -168,6 +172,14 @@ const App = () => {
         }
 
         .nav-links a:hover {
+          color: #2563eb;
+        }
+
+        a {
+          color: #2563eb;
+        }
+
+        a:visited {
           color: #2563eb;
         }
 
@@ -501,17 +513,35 @@ const App = () => {
                       {product.status}
                     </span>
                   </div>
-                  <a href={product.link}>{product.link}</a>
+                  {(product.linkOne &&
+                    product.linkTwo) && (
+                      <>
+                        <a href={product.linkOne}>App Store</a>
+                        <span> | </span>
+                        <a href={product.linkTwo}>Play Store</a>
+                      </>
+                    )
+                  }
+                  {product.linkOne && !product.linkTwo &&
+                    <>
+                      <a href={product.linkOne}>Website</a>
+                    </>
 
+                  }
+                  {product.privacy && (
+                    <>
+                      <span> | </span>
+                      <a href={product.privacy}>Privacy Policy</a>
+                    </>
+                  )}
                   <p>{product.description}</p>
                   <ul className="product-features">
                     {product.features.map((feature, featureIndex) => (
                       <li key={featureIndex}>{feature}</li>
                     ))}
                   </ul>
-                  {product.privacy && (
-                    <a href={product.privacy}>Privacy Policy</a>
-                  )}                </div>
+
+                </div>
               ))}
             </div>
           </div>
