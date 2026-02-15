@@ -43,6 +43,20 @@ const App = () => {
 
   const products = [
     {
+      name: "MetaChess",
+      status: "Live",
+      statusClass: "status-live",
+      linkOne: "https://store.steampowered.com/app/4257320/MetaChess/",
+      linkTwo: "",
+      description: "A twist to the classic chess game.",
+      features: [
+        "Chess with personalized boards and pieces",
+        "Online Multiplayer and local play",
+        "AI bots of varying difficulties",
+        "Various time controls and advanced features such as premoves"
+      ]
+    },
+    {
       name: "FlashHanzi",
       status: "Live",
       statusClass: "status-live",
@@ -87,19 +101,6 @@ const App = () => {
         "Interactive fretboard for various instruments",
         "Show notes feature",
         "Export and print tabs",
-      ]
-    },
-    {
-      name: "MetaChess",
-      status: "In Progress",
-      statusClass: "status-development",
-      linkOne: "",
-      linkTwo: "",
-      description: "A twist to the classic chess game.",
-      features: [
-        "Chess with personalized boards and pieces",
-        "Online Multiplayer and local play",
-        "AI bots of varying difficulties"
       ]
     },
   ];
